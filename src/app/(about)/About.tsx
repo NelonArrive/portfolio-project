@@ -11,14 +11,10 @@ export function About() {
 
 			<section className={styles.text}>
 				<p>
-					A passionate Frontend Developer crafting elegant web interfaces with
-					React, Next.js & TypeScript. I bring strong UI/UX skills, adaptive
-					layouts, performance tuning & state management mastery (Zustand,
-					Redux, React Query).
+					A passionate Fullstack Developer crafting elegant web interfaces with React, Next.js & TypeScript while building robust backend systems with Java, Spring Boot, Hibernate, Kafka, Redis & Microservices. I bring strong UI/UX skills, performance tuning, state management, and scalable architecture design.
 				</p>
 				<p>
-					If you're looking for someone who codes with purpose and design in
-					mind — let's bring your ideas to life!
+					If you're looking for someone who codes with purpose, bridges frontend and backend seamlessly, and delivers production-ready solutions — let's bring your ideas to life!
 				</p>
 			</section>
 

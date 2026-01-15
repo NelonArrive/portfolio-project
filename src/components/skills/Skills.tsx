@@ -1,36 +1,44 @@
 'use client'
 
-import { useQuery } from '@tanstack/react-query'
-
 import styles from './Skills.module.scss'
-import { SkillsItem } from './skills-item/SkillsItem'
-import { fetchStacks } from '@/services/stacks'
 
 export function Skills() {
-	const {
-		data: techStack = [],
-		isLoading,
-		isError
-	} = useQuery({
-		queryKey: ['stacks'],
-		queryFn: fetchStacks
-	})
-
 	return (
 		<section className={styles.wrapper}>
-			<h3 className={styles.title}>Skills</h3>
-			{isLoading && <p>Loading...</p>}
-			{isError && <p>Something went wrong...</p>}
-			<ul className={styles.list}>
-				{techStack.map(({ title, imgUrl }) => (
-					<SkillsItem
-						key={title}
-						title={title}
-						imgUrl={imgUrl}
-					/>
-				))}
-			</ul>
-			<p>...and many more!</p>
+			<h2 className={styles.mainTitle}>🛠️ Skills</h2>
+
+			<div className={styles.block}>
+				<h3 className={styles.subtitle}>Backend</h3>
+				<img
+					src='https://skillicons.dev/icons?i=java,spring,hibernate&theme=dark'
+					alt='Languages & Frameworks'
+					loading='lazy'
+				/>{' '}
+				|{' '}
+				<img
+					src='https://skillicons.dev/icons?i=nestjs,prisma,graphql&theme=dark'
+					alt='Languages & Frameworks'
+					loading='lazy'
+				/>
+			</div>
+
+			<div className={styles.block}>
+				<h3 className={styles.subtitle}>Databases & Infrastructure</h3>
+				<img
+					src='https://skillicons.dev/icons?i=postgres,mysql,redis,kafka,docker,linux,maven,gradle,git,vite,bun&theme=dark'
+					alt='Databases & Infrastructure'
+					loading='lazy'
+				/>
+			</div>
+
+			<div className={styles.block}>
+				<h3 className={styles.subtitle}>Frontend</h3>
+				<img
+					src='https://skillicons.dev/icons?i=react,redux,nextjs,typescript,javascript,sass,tailwind,vue,pinia,apollo&theme=dark'
+					alt='Frontend'
+					loading='lazy'
+				/>
+			</div>
 		</section>
 	)
 }

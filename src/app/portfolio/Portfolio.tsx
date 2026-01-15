@@ -1,13 +1,13 @@
 'use client'
 
-import { useQuery } from '@tanstack/react-query'
 import type { Metadata } from 'next'
 
 import { Heading } from '@/components/ui'
 
 import styles from './Portfolio.module.scss'
 import { PortfolioItem } from './portfolio-item/PortfolioItem'
-import { fetchPortfolio } from '@/services/stacks'
+import projects from './portfolio.data.json'
+import { IPortfolioProject } from './portfolio.interface'
 
 export const metadata: Metadata = {
 	title: 'Portfolio',
@@ -15,31 +15,21 @@ export const metadata: Metadata = {
 }
 
 export function Portfolio() {
-	const { data: portfolioItem = [], isLoading } = useQuery({
-		queryKey: ['portfolio'],
-		queryFn: fetchPortfolio
-	})
-
 	return (
 		<div>
 			<Heading title='Portfolio' />
+
 			<section className={styles.projects}>
 				<ul className={styles.list}>
-					{isLoading ? (
-						'Loading...'
-					) : portfolioItem.length > 0 ? (
-						portfolioItem.map(item => (
-							<PortfolioItem
-								key={item.title}
-								category={item.category}
-								title={item.title}
-								imgUrl={item.imgUrl}
-								link={item.link}
-							/>
-						))
-					) : (
-						<p>So far, the projects are under development... 😒</p>
-					)}
+					{(projects as IPortfolioProject[]).map(item => (
+						<PortfolioItem
+							key={item.id}
+							category={item.category}
+							title={item.title}
+							imgUrl={item.imgUrl}
+							link={item.link}
+						/>
+					))}
 				</ul>
 			</section>
 		</div>

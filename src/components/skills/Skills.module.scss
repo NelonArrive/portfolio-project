@@ -1,29 +1,23 @@
 .wrapper {
-	.title {
-		font-size: 24px;
-		font-weight: 700;
-	}
-
-	.list {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		margin-top: 2rem;
-		gap: 13px;
-	}
-
-	& p {
-		margin-top: 16px;
-		text-align: center;
-	}
+	margin-top: 4rem;
 }
 
-@media screen and (max-width: 680px) {
-	.wrapper {
-		&List {
-			gap: 8px;
-			font-size: 15px;
-		}
-	}
+.mainTitle {
+	font-size: 2rem;
+	
+	margin-bottom: 2rem;
+}
+
+.block {
+	margin-bottom: 2.5rem;
+}
+
+.subtitle {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	opacity: 0.85;
+}
+
+.block img {
+	max-width: 100%;
 }

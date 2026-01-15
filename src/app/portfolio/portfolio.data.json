@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "category": "Fullstack",
+    "title": "Learning Platform",
+    "imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    "link": "https://example.com/learning-platform"
+  },
+  {
+    "id": 2,
+    "category": "Backend",
+    "title": "Auth Service",
+    "imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    "link": "https://example.com/auth-service"
+  },
+  {
+    "id": 3,
+    "category": "Frontend",
+    "title": "Portfolio Website",
+    "imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    "link": "https://example.com/portfolio"
+  },
+  {
+    "id": 4,
+    "category": "Backend",
+    "title": "Order Management API",
+    "imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    "link": "https://example.com/order-api"
+  },
+  {
+    "id": 5,
+    "category": "Fullstack",
+    "title": "Chat Application",
+    "imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    "link": "https://example.com/chat-app"
+  },
+  {
+    "id": 6,
+    "category": "Infrastructure",
+    "title": "CI/CD Pipeline",
+    "imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+    "link": "https://example.com/cicd"
+  }
+]

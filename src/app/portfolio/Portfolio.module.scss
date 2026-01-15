@@ -1,14 +1,27 @@
 .projects {
-	margin-top: 30px;
+	margin-top: 2rem;
+}
 
+.list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 2rem;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
 	.list {
-		display: flex;
-		margin-bottom: 10px;
-		gap: 30px;
+		gap: 1.5rem;
+	}
+}
 
-		p {
-			font-size: 24px;
-			font-weight: 600;
-		}
+/* Mobile */
+@media (max-width: 640px) {
+	.list {
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
 	}
 }

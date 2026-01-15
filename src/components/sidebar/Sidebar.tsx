@@ -28,7 +28,7 @@ export function Sidebar() {
 				</Link>
 				<div className=''>
 					<div className={styles.logoTitle}>Nelon Arrive</div>
-					<div className={styles.logoText}>Frontend Developer</div>
+					<div className={styles.logoText}>Fullstack developer</div>
 				</div>
 
 				<button

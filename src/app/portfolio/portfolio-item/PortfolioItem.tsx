@@ -16,24 +16,22 @@ export function PortfolioItem({
 	imgUrl,
 	link
 }: IPortfolioItem) {
-	const fakeImg = 'https://fakeimg.pl/260x145?text=Image&font=bebas'
-
 	return (
 		<li className={styles.item}>
-			<a
+			<Link
 				target='_blank'
 				href={link}
 			>
 				<div className={styles.image}>
 					<Image
 						priority
-						src={imgUrl ? imgUrl : fakeImg}
+						src={imgUrl}
 						alt={title}
-						width={260}
+						width={350}
 						height={145}
 					/>
 				</div>
-			</a>
+			</Link>
 			<div className={styles.content}>
 				<h3 className={styles.title}>{title}</h3>
 				<p className={styles.category}>{category}</p>
