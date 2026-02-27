@@ -20,7 +20,7 @@ export function Sidebar() {
 				>
 					<Image
 						priority
-						src='/logo.jpg'
+						src='/logo.png'
 						alt='logo nelon arrive'
 						width={80}
 						height={80}
