@@ -1,23 +1,29 @@
 'use client'
 
+import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useState } from 'react'
 
 import styles from './Sidebar.module.scss'
+import { Link, routing, usePathname, useRouter } from '@/i18n/routing'
 
 export function Sidebar() {
 	const [showContacts, setShowContacts] = useState(false)
+	const t = useTranslations('sidebar')
+	const locale = useLocale()
+	const router = useRouter()
+	const pathname = usePathname()
+
+	function switchLocale(next: string) {
+		router.replace(pathname, { locale: next })
+	}
 
 	return (
 		<aside
 			className={`${styles.sidebar} ${showContacts ? styles.contactsVisible : ''}`}
 		>
 			<div className={styles.logo}>
-				<Link
-					className={styles.logoImage}
-					href='/'
-				>
+				<Link className={styles.logoImage} href='/'>
 					<Image
 						priority
 						src='/logo.png'
@@ -26,37 +32,29 @@ export function Sidebar() {
 						height={80}
 					/>
 				</Link>
-				<div className=''>
-					<div className={styles.logoTitle}>Nelon Arrive</div>
-					<div className={styles.logoText}>Fullstack developer</div>
+				<div>
+					<div className={styles.logoTitle}>
+						David <br /> Polovnikov
+					</div>
+					<div className={styles.logoText}>{t('role')}</div>
 				</div>
-
 				<button
 					className={styles.btn}
 					onClick={() => setShowContacts(!showContacts)}
 				>
-					<span>Show Contacts</span>
+					<span>{showContacts ? t('hideContacts') : t('showContacts')}</span>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
-						version='1.1'
-						xmlnsXlink='http://www.w3.org/1999/xlink'
 						width='13'
 						height='13'
-						x='0'
-						y='0'
 						viewBox='0 0 24 24'
-						enableBackground='new 0 0 512 512'
-						xmlSpace='preserve'
 					>
-						<g>
-							<path
-								fill='#ebebeb'
-								fillRule='evenodd'
-								d='M5.293 8.293a1 1 0 0 0 0 1.414l6 6a1 1 0 0 0 1.414 0l6-6a1 1 0 0 0-1.414-1.414L12 13.586 6.707 8.293a1 1 0 0 0-1.414 0z'
-								clipRule='evenodd'
-								opacity='1'
-							/>
-						</g>
+						<path
+							fill='#ebebeb'
+							fillRule='evenodd'
+							d='M5.293 8.293a1 1 0 0 0 0 1.414l6 6a1 1 0 0 0 1.414 0l6-6a1 1 0 0 0-1.414-1.414L12 13.586 6.707 8.293a1 1 0 0 0-1.414 0z'
+							clipRule='evenodd'
+						/>
 					</svg>
 				</button>
 			</div>
@@ -75,7 +73,7 @@ export function Sidebar() {
 						/>
 					</div>
 					<div className={styles.contactsItemText}>
-						<div className={styles.contactsItemTitle}>Email</div>
+						<div className={styles.contactsItemTitle}>{t('email')}</div>
 						<a
 							href='mailto:nelon.arrive@gmail.com'
 							className={styles.contactsItemValue}
@@ -84,7 +82,6 @@ export function Sidebar() {
 						</a>
 					</div>
 				</div>
-
 				<div className={styles.contactsItem}>
 					<div className='icon-box'>
 						<Image
@@ -96,16 +93,12 @@ export function Sidebar() {
 						/>
 					</div>
 					<div className={styles.contactsItemText}>
-						<div className={styles.contactsItemTitle}>Phone</div>
-						<a
-							href='tel:+79530526260'
-							className={styles.contactsItemValue}
-						>
+						<div className={styles.contactsItemTitle}>{t('phone')}</div>
+						<a href='tel:+79530526260' className={styles.contactsItemValue}>
 							+7(953)052-62-60
 						</a>
 					</div>
 				</div>
-
 				<div className={styles.contactsItem}>
 					<div className='icon-box'>
 						<Image
@@ -117,13 +110,14 @@ export function Sidebar() {
 						/>
 					</div>
 					<div className={styles.contactsItemText}>
-						<p className={styles.contactsItemTitle}>Location</p>
+						<p className={styles.contactsItemTitle}>{t('location')}</p>
 						<address className={styles.contactsItemValue}>
-							Ekaterinburg, Russia
+							{t('locationValue')}
 						</address>
 					</div>
 				</div>
 			</div>
+
 			<div className={styles.socialList}>
 				<div className={styles.socialListItem}>
 					<Link href='https://github.com/NelonArrive'>
@@ -136,7 +130,6 @@ export function Sidebar() {
 						/>
 					</Link>
 				</div>
-
 				<div className={styles.socialListItem}>
 					<Link href='https://t.me/NelonArrive'>
 						<Image
@@ -148,30 +141,27 @@ export function Sidebar() {
 						/>
 					</Link>
 				</div>
+			</div>
 
-				<div className={styles.socialListItem}>
-					<Link href='https://vk.com/nelonarrive'>
+			{/* Language switcher */}
+			<div className={styles.localeSwitcher}>
+				{routing.locales.map(loc => (
+					<button
+						key={loc}
+						className={`${styles.localeBtn} ${loc === locale ? styles.localeBtnActive : ''}`}
+						onClick={() => switchLocale(loc)}
+						title={loc === 'ru' ? 'Русский' : 'English'}
+					>
 						<Image
-							className={styles.socialListItemImage}
-							src='/vk.svg'
-							alt='vk icon'
+							src={`/flags/${loc}.svg`}
+							alt={loc}
 							width={22}
 							height={22}
+							className={styles.flagIcon}
 						/>
-					</Link>
-				</div>
-
-				<div className={styles.socialListItem}>
-					<Link href='https://wa.me/79530526260'>
-						<Image
-							className={styles.socialListItemImage}
-							src='/whatsapp.svg'
-							alt='whatsapp icon'
-							width={22}
-							height={22}
-						/>
-					</Link>
-				</div>
+						<span>{loc.toUpperCase()}</span>
+					</button>
+				))}
 			</div>
 		</aside>
 	)

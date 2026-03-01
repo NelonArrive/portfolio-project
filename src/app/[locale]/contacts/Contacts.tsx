@@ -18,9 +18,7 @@ type FormData = {
 }
 
 export function Contacts() {
-	const { resolvedTheme } = useTheme()
 	const formRef = useRef<HTMLFormElement | null>(null)
-	const [isSent, setIsSent] = useState(false)
 
 	const {
 		register,
@@ -32,14 +30,15 @@ export function Contacts() {
 	})
 
 	const onSubmit = async (data: FormData) => {
-		if (!formRef.current) return
 		try {
-			await emailjs.sendForm(
-				'service_t73tcc9',
-				'template_gce1ned',
-				formRef.current,
-				'CeR_7P-DuXn_zqoxt'
-			)
+			const res = await fetch('/api/contact', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(data)
+			})
+
+			if (!res.ok) throw new Error('Server error')
+
 			toast.success('Message sent ✅', {
 				description: 'We will respond to your inquiry as soon as possible'
 			})
@@ -54,22 +53,7 @@ export function Contacts() {
 		<>
 			<Heading title='Contacts' />
 
-			{resolvedTheme && (
-				<div className={styles.map}>
-					<iframe
-						src={`https://yandex.ru/map-widget/v1/?ll=60.475066%2C56.788751&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE2NjUzNxJP0KDQvtGB0YHQuNGPLCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCV0LrQsNGC0LXRgNC40L3QsdGD0YDQsyIKDdBjckIVIFpjQg%2C%2C&z=9.35${
-							resolvedTheme === 'dark' ? '&theme=dark' : ''
-						}`}
-						width='100%'
-						height='380'
-						allowFullScreen
-						style={{ position: 'relative', borderRadius: '16px' }}
-					></iframe>
-				</div>
-			)}
-
 			<div>
-				<h2 className={styles.title}>Contact Form</h2>
 				<form
 					ref={formRef}
 					className={styles.form}

@@ -18,18 +18,9 @@ export function PortfolioItem({
 }: IPortfolioItem) {
 	return (
 		<li className={styles.item}>
-			<Link
-				target='_blank'
-				href={link}
-			>
+			<Link target='_blank' href={link}>
 				<div className={styles.image}>
-					<Image
-						priority
-						src={imgUrl}
-						alt={title}
-						width={350}
-						height={145}
-					/>
+					<Image priority src={imgUrl} alt={title} width={350} height={145} />
 				</div>
 			</Link>
 			<div className={styles.content}>

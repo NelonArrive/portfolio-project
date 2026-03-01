@@ -1,0 +1,114 @@
+{
+  "sidebar": {
+    "role": "Fullstack developer",
+    "showContacts": "Show Contacts",
+    "hideContacts": "Hide Contacts",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "locationValue": "Ekaterinburg, Russia"
+  },
+  "nav": {
+    "about": "About",
+    "resume": "Resume",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "about": {
+    "heading": "About Me",
+    "bio1": "A passionate Fullstack Developer crafting elegant web interfaces with React, Next.js & TypeScript while building robust backend systems with Java, Spring Boot, Hibernate, Kafka, Redis & Microservices. I bring strong UI/UX skills, performance tuning, state management, and scalable architecture design.",
+    "bio2": "If you're looking for someone who codes with purpose, bridges frontend and backend seamlessly, and delivers production-ready solutions — let's bring your ideas to life!"
+  },
+  "services": {
+    "heading": "What I'm doing",
+    "backend": {
+      "title": "Backend Development (Java / Spring Boot)",
+      "description": "Building scalable and reliable backend systems using Java & Spring Boot. Designing REST APIs, microservices architecture, and integrating MySQL, Redis, and Kafka."
+    },
+    "microservices": {
+      "title": "Microservices & System Architecture",
+      "description": "Designing and maintaining distributed systems with Spring Cloud, Kafka, and Docker. Implementing fault-tolerant, event-driven architectures for high-load applications."
+    },
+    "database": {
+      "title": "Database Design & Optimization",
+      "description": "Working with PostgreSQL and MySQL: schema design, query optimization, indexing, and database migrations with Flyway."
+    },
+    "fullstack": {
+      "title": "Fullstack Development (React / Vue / Spring Boot)",
+      "description": "Developing fullstack applications with Spring Boot on the backend and modern frontend stacks (React / Next.js). Integrating them with responsive user interfaces."
+    }
+  },
+  "skills": {
+    "heading": "Skills",
+    "backend": "Backend",
+    "infra": "Databases & Infrastructure",
+    "frontend": "Frontend"
+  },
+  "resume": {
+    "heading": "Resume",
+    "education": "Education",
+    "experience": "Experience",
+    "technicalSkills": "Technical Skills",
+    "downloadCV": "Download CV",
+    "edu": {
+      "degree": "Information Systems & Programming",
+      "institution": "Ural Industrial and Economic College",
+      "period": "Sep 2024 — May 2027",
+      "details": [
+        "Python, JavaScript, C#, algorithms & OOP fundamentals",
+        "Frontend development: interfaces, forms, components",
+        "Data structures, scripting & utilities"
+      ]
+    },
+    "exp": {
+      "nelonshift": {
+        "role": "Backend Developer",
+        "company": "NelonShift",
+        "period": "Dec 2025 — Mar 2026",
+        "duration": "3 mos",
+        "highlights": [
+          "Stateless API with optional stateful control via Redis — token invalidation in < 50 ms",
+          "Reduced DB queries by ~35–40% via Redis as distributed cache with TTL strategies",
+          "25+ REST endpoints, ~70% test coverage with unit & integration tests",
+          "Handles 300–500 req/min and 200+ active sessions with stable response time"
+        ]
+      },
+      "nelonecommerce": {
+        "role": "Backend Developer",
+        "company": "NelonEcommerce",
+        "period": "Oct 2025 — Dec 2025",
+        "duration": "2 mos",
+        "highlights": [
+          "JWT auth system with access + refresh tokens and session revocation logic",
+          "Spring Security with custom filters for per-request JWT validation and role-based access",
+          "Optimized DB transactions to reduce locks and simplify migrations",
+          "Configured Maven build profiles for dev/prod with integration tests"
+        ]
+      },
+      "freelance": {
+        "role": "Web Developer",
+        "company": "Freelance",
+        "period": "May 2023 — Sep 2023",
+        "duration": "3 mos",
+        "highlights": [
+          "Layout, creation & refactoring of websites",
+          "Page optimization, CSS/JS minification",
+          "SEO-friendly code with valid markup and proper meta tags"
+        ]
+      }
+    },
+    "skillCategories": {
+      "languages": { "label": "Languages", "value": "Java" },
+      "frameworks": { "label": "Frameworks", "value": "Spring Boot, Spring Security, Spring Cloud, Hibernate" },
+      "databases": { "label": "Databases", "value": "PostgreSQL, MySQL, Redis" },
+      "tools": { "label": "Tools", "value": "Kafka, Maven, JUnit, Mockito, OpenAPI/Swagger" },
+      "concepts": { "label": "Concepts", "value": "RESTful APIs, Microservices, CI/CD, SOLID" }
+    }
+  },
+  "notFound": {
+    "heading": "None :)",
+    "title": "404 - Page not found",
+    "description": "Perhaps you were mistaken... Check if you entered the address correctly? Or go to the main page",
+    "goHome": "Go to Home"
+  }
+}

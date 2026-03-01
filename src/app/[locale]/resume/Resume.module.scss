@@ -1,0 +1,251 @@
+.resume {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ── Layout ────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Block (section wrapper) ───────────────────────────── */
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.blockHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--background-light);
+  border: 1px solid var(--border);
+  color: var(--text);
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.blockTitle {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+/* ── Card ──────────────────────────────────────────────── */
+.card {
+  position: relative;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: var(--background-light);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--border);
+    border-radius: 2px 0 0 2px;
+    transition: background 0.2s;
+  }
+
+  &:hover {
+    border-color: var(--active-link);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2);
+
+    &::before {
+      background: var(--text);
+    }
+  }
+}
+
+.cardFeatured {
+  border-color: var(--active-link);
+
+  &::before {
+    background: var(--text);
+  }
+}
+
+/* ── Card internals ────────────────────────────────────── */
+.cardMeta {
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-alt);
+  background: var(--background-dark);
+  border: 1px solid var(--border);
+  padding: 3px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+.cardRole {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 3px;
+  letter-spacing: -0.01em;
+}
+
+.cardCompany {
+  font-size: 13px;
+  color: var(--text-alt);
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.stackRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--background-dark);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+  transition: border-color 0.15s;
+
+  .card:hover & {
+    border-color: var(--active-link);
+  }
+}
+
+.detailList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  li {
+    position: relative;
+    padding-left: 14px;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--text-alt);
+
+    &::before {
+      content: '·';
+      position: absolute;
+      left: 3px;
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
+}
+
+/* ── Skills ────────────────────────────────────────────── */
+.skillsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: var(--background-light);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s, transform 0.2s;
+
+  &:hover {
+    border-color: var(--active-link);
+    transform: translateY(-1px);
+  }
+}
+
+.skillLabel {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-alt);
+}
+
+.skillValue {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* ── Download button ───────────────────────────────────── */
+.downloadLink {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: var(--background-light);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s, box-shadow 0.15s;
+  letter-spacing: 0.02em;
+
+  &:hover {
+    border-color: var(--active-link);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

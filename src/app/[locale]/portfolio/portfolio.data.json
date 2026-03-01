@@ -1,0 +1,72 @@
+[
+	{
+		"id": 1,
+		"category": "Backend",
+		"title": "NelonShift",
+		"imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+		"link": "https://github.com/NelonArrive/nelonshift-backend"
+	},
+	{
+		"id": 2,
+		"category": "Fullstack",
+		"title": "Auth Service",
+		"imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+		"link": "https://github.com/NelonArrive/full-auth"
+	},
+	{
+		"id": 3,
+		"category": "Frontend",
+		"title": "Portfolio Website",
+		"imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+		"link": "https://github.com/NelonArrive/portfolio-project"
+	},
+	{
+		"id": 4,
+		"category": "Fullstack",
+		"title": "NelonFlix",
+		"imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+		"link": "https://github.com/NelonArrive/nelonflix"
+	},
+	{
+		"id": 5,
+		"category": "Backend",
+		"title": "Dream Shops",
+		"imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+		"link": "https://github.com/NelonArrive/dream-shops"
+	},
+	{
+		"id": 5,
+		"category": "Backend",
+		"title": "Nelon Weather App",
+		"imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+		"link": "https://nelon-weather-vue.netlify.app/"
+	},
+	{
+		"id": 5,
+		"category": "Frontend",
+		"title": "Nelon Bookmark",
+		"imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+		"link": "https://nelon-bookmark.netlify.app/"
+	},
+	{
+		"id": 6,
+		"category": "Website",
+		"title": "Bahil Profi",
+		"imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+		"link": "https://bahilprofi.ru/"
+	},
+	{
+		"id": 7,
+		"category": "Website",
+		"title": "KHV911",
+		"imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+		"link": "https://khv911.ru/"
+	},
+	{
+		"id": 8,
+		"category": "Website",
+		"title": "Remito",
+		"imgUrl": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
+		"link": "https://ремито.рф/"
+	}
+]

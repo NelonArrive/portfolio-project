@@ -1,0 +1,114 @@
+{
+  "sidebar": {
+    "role": "Fullstack разработчик",
+    "showContacts": "Показать контакты",
+    "hideContacts": "Скрыть контакты",
+    "email": "Email",
+    "phone": "Телефон",
+    "location": "Местоположение",
+    "locationValue": "Екатеринбург, Россия"
+  },
+  "nav": {
+    "about": "Обо мне",
+    "resume": "Резюме",
+    "portfolio": "Портфолио",
+    "contact": "Контакты"
+  },
+  "about": {
+    "heading": "Обо мне",
+    "bio1": "Fullstack-разработчик, создающий элегантные веб-интерфейсы на React, Next.js и TypeScript, а также надёжные бэкенд-системы на Java, Spring Boot, Hibernate, Kafka, Redis и микросервисной архитектуре. Обладаю навыками UI/UX, оптимизации производительности, управления состоянием и проектирования масштабируемых решений.",
+    "bio2": "Если вы ищете разработчика, который пишет код с умом, легко объединяет фронтенд и бэкенд и доставляет готовые к продакшену решения — давайте воплотим ваши идеи в жизнь!"
+  },
+  "services": {
+    "heading": "Чем я занимаюсь",
+    "backend": {
+      "title": "Backend-разработка (Java / Spring Boot)",
+      "description": "Создание масштабируемых и надёжных бэкенд-систем на Java и Spring Boot. Проектирование REST API, микросервисной архитектуры и интеграция с MySQL, Redis и Kafka."
+    },
+    "microservices": {
+      "title": "Микросервисы и системная архитектура",
+      "description": "Проектирование и поддержка распределённых систем на Spring Cloud, Kafka и Docker. Реализация отказоустойчивых архитектур на основе событий для высоконагруженных приложений."
+    },
+    "database": {
+      "title": "Проектирование и оптимизация баз данных",
+      "description": "Работа с PostgreSQL и MySQL: проектирование схем, оптимизация запросов, индексирование и миграции с Flyway."
+    },
+    "fullstack": {
+      "title": "Fullstack-разработка (React / Vue / Spring Boot)",
+      "description": "Разработка fullstack-приложений на Spring Boot (бэкенд) и современных фронтенд-стеках (React / Next.js) с адаптивными пользовательскими интерфейсами."
+    }
+  },
+  "skills": {
+    "heading": "Навыки",
+    "backend": "Бэкенд",
+    "infra": "Базы данных и инфраструктура",
+    "frontend": "Фронтенд"
+  },
+  "resume": {
+    "heading": "Резюме",
+    "education": "Образование",
+    "experience": "Опыт работы",
+    "technicalSkills": "Технические навыки",
+    "downloadCV": "Скачать резюме",
+    "edu": {
+      "degree": "Информационные системы и программирование",
+      "institution": "Уральский промышленно-экономический техникум",
+      "period": "Сен 2024 — Май 2027",
+      "details": [
+        "Python, JavaScript, C#, основы алгоритмов и ООП",
+        "Frontend-разработка: интерфейсы, формы, компоненты",
+        "Структуры данных, скрипты и утилиты"
+      ]
+    },
+    "exp": {
+      "nelonshift": {
+        "role": "Backend-разработчик",
+        "company": "NelonShift",
+        "period": "Дек 2025 — Мар 2026",
+        "duration": "3 мес",
+        "highlights": [
+          "Stateless API с опциональным stateful-контролем через Redis — инвалидация токенов менее чем за 50 мс",
+          "Сокращение обращений к БД на ~35–40% через Redis как distributed cache с TTL-стратегиями",
+          "25+ REST-эндпоинтов, покрытие тестами ~70% (unit + integration)",
+          "Стабильная обработка 300–500 запросов/мин и 200+ активных сессий без задержки"
+        ]
+      },
+      "nelonecommerce": {
+        "role": "Backend-разработчик",
+        "company": "NelonEcommerce",
+        "period": "Окт 2025 — Дек 2025",
+        "duration": "2 мес",
+        "highlights": [
+          "JWT-аутентификация с access + refresh токенами и логикой отзыва сессий",
+          "Spring Security с кастомными фильтрами и ролевым доступом к эндпоинтам",
+          "Оптимизация транзакций БД для уменьшения блокировок и упрощения миграций",
+          "Настройка Maven-профилей dev/prod с интеграционными тестами"
+        ]
+      },
+      "freelance": {
+        "role": "Веб-разработчик",
+        "company": "Фриланс",
+        "period": "Май 2023 — Сен 2023",
+        "duration": "3 мес",
+        "highlights": [
+          "Вёрстка, создание и рефакторинг сайтов",
+          "Оптимизация страниц, минификация CSS/JS",
+          "SEO-friendly код с валидной разметкой и мета-тегами"
+        ]
+      }
+    },
+    "skillCategories": {
+      "languages": { "label": "Языки", "value": "Java" },
+      "frameworks": { "label": "Фреймворки", "value": "Spring Boot, Spring Security, Spring Cloud, Hibernate" },
+      "databases": { "label": "Базы данных", "value": "PostgreSQL, MySQL, Redis" },
+      "tools": { "label": "Инструменты", "value": "Kafka, Maven, JUnit, Mockito, OpenAPI/Swagger" },
+      "concepts": { "label": "Концепции", "value": "RESTful APIs, Microservices, CI/CD, SOLID" }
+    }
+  },
+  "notFound": {
+    "heading": "Ничего :)",
+    "title": "404 - Страница не найдена",
+    "description": "Возможно, вы ошиблись... Проверьте правильность адреса или вернитесь на главную страницу.",
+    "goHome": "На главную"
+  }
+}

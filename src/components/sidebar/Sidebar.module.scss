@@ -38,7 +38,7 @@
 		&Image {
 			display: flex;
 			justify-content: center;
-			margin-bottom: 25px;
+			margin-bottom: 15px;
 
 			img {
 				border-radius: 20px;
@@ -170,6 +170,10 @@
 				}
 			}
 
+			&Title {
+				text-align: left;
+			}
+
 			&Text {
 				margin: 0;
 			}
@@ -278,6 +282,7 @@
 			}
 
 			&Title {
+				margin-bottom: 7px;
 				font-size: 17px;
 				font-weight: 700;
 			}
@@ -288,6 +293,50 @@
 				border-radius: 8px;
 				font-size: 11px;
 			}
+		}
+	}
+}
+
+.localeSwitcher {
+	display: flex;
+	gap: 6px;
+	padding: 12px 16px;
+	margin-top: auto;
+	align-items: center;
+
+	.localeBtn {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		width: 100%;
+		padding: 6px 10px;
+		border-radius: 8px;
+		border: 1px solid var(--border);
+		background: var(--background-light);
+		color: var(--text-alt);
+		font-size: 11px;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		cursor: pointer;
+		transition:
+			border-color 0.2s,
+			color 0.2s,
+			background 0.2s;
+
+		.flagIcon {
+			border-radius: 3px;
+			object-fit: cover;
+		}
+
+		&:hover {
+			border-color: var(--active-link);
+			color: var(--text);
+		}
+
+		&Active {
+			border-color: var(--text);
+			color: var(--text);
+			background: var(--background-dark);
 		}
 	}
 }
